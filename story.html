@@ -7,6 +7,8 @@
     <title>Our Story — Restore Vintage Watch Restoration</title>
     <meta name="description"
         content="Three Generations of Horological Mastery. Discover the story of our workshop and our dedication to timekeeping craftsmanship.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
@@ -26,38 +26,35 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo"><i class="fas fa-clock" style="margin-right: 10px;"></i>RESTORE</a>
+            <a href="index.html" class="logo"><i class="fas fa-clock"></i>RESTORE</a>
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="story.html" class="active">Home 2</a></li>
+                <li><a href="story.html">Home 2</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="process.html">Process</a></li>
                 <li><a href="journal.html">Journal</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <!-- Mobile Actions -->
-                <li class="nav-actions-mobile">
-                    <button class="toggle-btn rtl-toggle" title="Toggle RTL"
-                        style="color: white; font-family: 'Cinzel', serif; font-size: 0.8rem; margin-bottom: 1rem;">
-                        <i class="fas fa-exchange-alt"></i> Toggle RTL
+                <li class="mobile-only">
+                    <button class="toggle-btn rtl-toggle" title="Toggle RTL">
+                        <i class="fas fa-exchange-alt"></i>
                     </button>
-                    <button class="toggle-btn theme-toggle" title="Toggle Theme"
-                        style="color: white; font-family: 'Cinzel', serif; font-size: 0.8rem;">
-                        <i class="fas fa-moon"></i> Theme Mode
+                    <button class="toggle-btn theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
                     </button>
+                    <a href="login.html" class="btn-login">Login</a>
                 </li>
             </ul>
 
             <div class="nav-actions">
                 <button class="toggle-btn rtl-toggle" title="Toggle RTL">
                     <i class="fas fa-exchange-alt"></i>
-                    <span class="rtl-toggle-text"
-                        style="font-size: 0.7rem; margin-left: 5px; font-family: 'Cinzel', serif;">RTL</span>
+                    <span class="rtl-toggle-text">RTL</span>
                 </button>
                 <button class="toggle-btn theme-toggle" title="Toggle Theme">
                     <i class="fas fa-moon"></i>
                 </button>
-                <a href="login.html" class="btn-login" style="font-family: 'Cinzel', serif;">Login</a>
+                <a href="login.html" class="btn-login">Login</a>
             </div>
 
             <div class="hamburger">
@@ -70,11 +67,11 @@
 
     <!-- HERO SECTION -->
     <section class="hero-section" style="height: 100vh;">
-        <div class="hero-blurred-bg" style="background-image: url('https://amsterdamvintagewatches.com/wp-content/uploads/attachments/FIXAR_DE-LOTELING_%C2%A9WILLEMVANPUYENBROECK_204-scaled.jpg');"></div>
+        <div class="hero-blurred-bg" style="background-image: url('https://amsterdamvintagewatches.com/wp-content/uploads/attachments/FIXAR_DE-LOTELING_%C2%A9WILLEMVANPUYENBROECK_204-scaled.jpg'); opacity: 1.0;"></div>
         <div class="hero-overlay"></div>
         
-        <div class="container text-center">
-            <span class="eyebrow">Established 1987</span>
+        <div class="container text-center reveal">
+            <span class="eyebrow" style="color: var(--secondary);">Established 1987</span>
             <h1 class="italic">The Human Element</h1>
             <p>Horology is not just part of our history; it is our heartbeat. We treat every watch that crosses our workbench with the same reverence as our ancestors once did.</p>
             <div class="hero-btns" style="display: flex; gap: 1.5rem; justify-content: center;">
@@ -131,38 +128,22 @@
                 <p class="italic" style="color: var(--accent);">Servicing the most prestigious manufactures</p>
             </div>
 
-            <div class="grid grid-4" style="opacity: 0.6;">
-                <div class="brand-item reveal text-center"
-                    style="padding: 2rem; border: 1px solid rgba(184, 149, 63, 0.2);">
-                    <h4 style="color: var(--text-light); font-family: 'Cinzel', serif;">ROLEX</h4>
+            <div class="grid grid-4 brand-logos">
+                <div class="card reveal" style="padding: 2rem; border-top: none;">
+                    <i class="fas fa-crown"></i>
+                    <h4 style="font-family: 'Cinzel', serif;">ROLEX</h4>
                 </div>
-                <div class="brand-item reveal text-center"
-                    style="padding: 2rem; border: 1px solid rgba(184, 149, 63, 0.2); transition-delay: 0.1s;">
-                    <h4 style="color: var(--text-light); font-family: 'Cinzel', serif;">OMEGA</h4>
+                <div class="card reveal" style="padding: 2rem; border-top: none; transition-delay: 0.1s;">
+                    <i class="fas fa-dharmachakra"></i>
+                    <h4 style="font-family: 'Cinzel', serif;">OMEGA</h4>
                 </div>
-                <div class="brand-item reveal text-center"
-                    style="padding: 2rem; border: 1px solid rgba(184, 149, 63, 0.2); transition-delay: 0.2s;">
-                    <h4 style="color: var(--text-light); font-family: 'Cinzel', serif;">PATEK PHILIPPE</h4>
+                <div class="card reveal" style="padding: 2rem; border-top: none; transition-delay: 0.2s;">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4 style="font-family: 'Cinzel', serif;">PATEK</h4>
                 </div>
-                <div class="brand-item reveal text-center"
-                    style="padding: 2rem; border: 1px solid rgba(184, 149, 63, 0.2); transition-delay: 0.3s;">
-                    <h4 style="color: var(--text-light); font-family: 'Cinzel', serif;">IWC</h4>
-                </div>
-                <div class="brand-item reveal text-center"
-                    style="padding: 2rem; border: 1px solid rgba(184, 149, 63, 0.2);">
-                    <h4 style="color: var(--text-light); font-family: 'Cinzel', serif;">GRAND SEIKO</h4>
-                </div>
-                <div class="brand-item reveal text-center"
-                    style="padding: 2rem; border: 1px solid rgba(184, 149, 63, 0.2); transition-delay: 0.1s;">
-                    <h4 style="color: var(--text-light); font-family: 'Cinzel', serif;">AUDEMARS PIGUET</h4>
-                </div>
-                <div class="brand-item reveal text-center"
-                    style="padding: 2rem; border: 1px solid rgba(184, 149, 63, 0.2); transition-delay: 0.2s;">
-                    <h4 style="color: var(--text-light); font-family: 'Cinzel', serif;">CARTIER</h4>
-                </div>
-                <div class="brand-item reveal text-center"
-                    style="padding: 2rem; border: 1px solid rgba(184, 149, 63, 0.2); transition-delay: 0.3s;">
-                    <h4 style="color: var(--text-light); font-family: 'Cinzel', serif;">LONGINES</h4>
+                <div class="card reveal" style="padding: 2rem; border-top: none; transition-delay: 0.3s;">
+                    <i class="fas fa-compass"></i>
+                    <h4 style="font-family: 'Cinzel', serif;">IWC</h4>
                 </div>
             </div>
             <p class="text-center reveal"
@@ -180,34 +161,34 @@
             </div>
 
             <div class="carousel-track"
-                style="display: flex; width: 100vw; animation: scroll-carousel 30s linear infinite;">
+                style="display: flex; animation: scroll-carousel 30s linear infinite; width: max-content;">
                 <!-- Slides (Images) -->
                 <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">Omega Speedmaster 1969</h4>
                     </div>
                 </div>
                 <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDhZ7ysMHLa-sAgvyW43WR3eEIlnf-0Qz6w&s') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDhZ7ysMHLa-sAgvyW43WR3eEIlnf-0Qz6w&s'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">Patek Philippe Calatrava</h4>
                     </div>
                 </div>
                 <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://mlbxevudnuj9.i.optimole.com/cb:7-aA.2cee7/w:1080/h:1080/q:mauto/f:best/https://shrevecrumpandlow.com/wp-content/uploads/2023/02/DSC09100.jpg') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://mlbxevudnuj9.i.optimole.com/cb:7-aA.2cee7/w:1080/h:1080/q:mauto/f:best/https://shrevecrumpandlow.com/wp-content/uploads/2023/02/DSC09100.jpg'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">Rolex Submariner 1972</h4>
                     </div>
                 </div>
                 <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">IWC Portugieser</h4>
                     </div>
                 </div>
                 <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://img.chrono24.com/images/uhren/44546766-0sdi7ogr4vbc61zj2csm79rk-ExtraLarge.jpg') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://img.chrono24.com/images/uhren/44546766-0sdi7ogr4vbc61zj2csm79rk-ExtraLarge.jpg'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">Corono 45</h4>
                     </div>
@@ -215,31 +196,31 @@
                 <!-- Duplicate for loop -->
 
          <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDhZ7ysMHLa-sAgvyW43WR3eEIlnf-0Qz6w&s') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDhZ7ysMHLa-sAgvyW43WR3eEIlnf-0Qz6w&s'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">Patek Philippe Calatrava</h4>
                     </div>
                 </div>
                 <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://mlbxevudnuj9.i.optimole.com/cb:7-aA.2cee7/w:1080/h:1080/q:mauto/f:best/https://shrevecrumpandlow.com/wp-content/uploads/2023/02/DSC09100.jpg') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://mlbxevudnuj9.i.optimole.com/cb:7-aA.2cee7/w:1080/h:1080/q:mauto/f:best/https://shrevecrumpandlow.com/wp-content/uploads/2023/02/DSC09100.jpg'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">Rolex Submariner 1972</h4>
                     </div>
                 </div>
                 <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">Omega Speedmaster 1969</h4>
                     </div>
                 </div>
                  <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">IWC Portugieser</h4>
                     </div>
                 </div>
                 <div class="carousel-slide"
-                    style="min-width: 400px; height: 300px; background: url('https://img.chrono24.com/images/uhren/44546766-0sdi7ogr4vbc61zj2csm79rk-ExtraLarge.jpg') center/cover; margin-right: 20px; border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    style="background-image: url('https://img.chrono24.com/images/uhren/44546766-0sdi7ogr4vbc61zj2csm79rk-ExtraLarge.jpg'); border-top: 3px solid var(--secondary); display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                     <div style="background: rgba(0,0,0,0.6); width: 100%; padding: 1rem; color: white; display: block;">
                         <h4 style="color: white; font-size: 1rem; margin: 0;">Corono 45</h4>
                     </div>
@@ -279,19 +260,19 @@
         </div>
 
     </section>
-    <!-- CORE PHILOSOPHY -->
-    <section class="section">
-        <div class="container" style="padding: 0 2rem;">
+    <!-- PHILOSOPHY SECTION -->
+    <section class="section" style="background-color: var(--bg-light); border-top: 1px solid var(--border);">
+        <div class="container">
             <div class="text-center reveal" style="margin-bottom: 4rem;">
-                <span class="eyebrow">Our Philosophy</span>
-                <h2>Dedicated To Preservation</h2>
-                <p class="italic" style="color: var(--secondary);">The principles that guide our master craftsmen</p>
+                <span class="eyebrow">The Philosophy</span>
+                <h2>Principles of Preservation</h2>
+                <p class="italic" style="color: var(--accent);">Guided by tradition, driven by perfection</p>
             </div>
 
             <div class="grid grid-3 insights-grid">
                 <div class="card reveal">
-                    <div class="card-img-wrapper">
-                        <img src="https://www.kapoorwatch.com/blogs/wp-content/uploads/Banner-58-2.webp" alt="Absolute Integrity">
+                    <div class="card-img-wrapper" style="padding: 1.5rem 1.5rem 0; height: auto;">
+                        <img src="https://www.kapoorwatch.com/blogs/wp-content/uploads/Banner-58-2.webp" alt="Absolute Integrity" style="border-radius: 4px; height: 200px; object-fit: cover;">
                         <div class="card-overlay"></div>
                     </div>
                     <div class="card-content">
@@ -308,8 +289,8 @@
                     </div>
                 </div>
                 <div class="card reveal" style="transition-delay: 0.1s;">
-                    <div class="card-img-wrapper">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSROdRu4YRSkcboIbiBzozRU40ajk99_UJjsQ&s" alt="Historical Context">
+                    <div class="card-img-wrapper" style="padding: 1.5rem 1.5rem 0; height: auto;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSROdRu4YRSkcboIbiBzozRU40ajk99_UJjsQ&s" alt="Historical Context" style="border-radius: 4px; height: 200px; object-fit: cover;">
                         <div class="card-overlay"></div>
                     </div>
                     <div class="card-content">
@@ -326,8 +307,8 @@
                     </div>
                 </div>
                 <div class="card reveal" style="transition-delay: 0.2s;">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Enduring Value">
+                    <div class="card-img-wrapper" style="padding: 1.5rem 1.5rem 0; height: auto;">
+                        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Enduring Value" style="border-radius: 4px; height: 200px; object-fit: cover;">
                         <div class="card-overlay"></div>
                     </div>
                     <div class="card-content">
@@ -353,8 +334,7 @@
                     <span class="eyebrow">The Journal</span>
                     <h2>Horological Insights</h2>
                     <div class="small-article"
-                        style="display: flex; gap: 1.5rem; margin-top: 2rem; margin-bottom: 2rem;">
-                        <img src="https://aiscollective.com/cdn/shop/files/Kit_Liefesyle_1_2048.jpg?v=1728746026&width=1946"
+                        style="display: flex; gap: 1.5rem; margin-top: 2rem; margin-bottom: 2rem;">                        <img src="https://aiscollective.com/cdn/shop/files/Kit_Liefesyle_1_2048.jpg?v=1728746026&width=1946"
                             style="width: 100px; height: 100px; object-fit: cover; border: 1px solid var(--border);">
                         <div>
                             <h4 style="font-size: 1rem;"><a href="journal.html">Why Ultrasonic Cleaning is the Gold
@@ -392,21 +372,6 @@
 
     </section>
 
-    <style>
-        /* story.html specific centering for journal articles on mobile */
-        @media (max-width: 768px) {
-            .journal-preview {
-                text-align: center;
-                margin-bottom: 4rem;
-            }
-            .small-article {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
-    </style>
-
 
 
     <!-- FOOTER -->
@@ -414,28 +379,25 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col reveal">
-                    <a href="index.html" class="logo" style="display: block; margin-bottom: 1.5rem;"><i
-                            class="fas fa-clock" style="margin-right: 10px;"></i>RESTORE</a>
-                    <p style="font-size: 0.9rem; opacity: 0.7;">Restoring time's treasures since 1987. We specialize in
-                        the preservation and technical restoration of vintage mechanical timepieces from the world's
-                        finest manufactures.</p>
-                    <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;"><i class="fas fa-clock"></i>RESTORE</a>
+                    <p>Restoring time's treasures since 1987. We specialize in the preservation and technical restoration of vintage mechanical timepieces from the world's finest manufactures.</p>
+                    <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.1s;">
+                <div class="footer-col reveal">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="story.html">Story</a></li>
+                        <li><a href="story.html">Home 2</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="process.html">Process</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.2s;">
+                <div class="footer-col reveal">
                     <h4>Services</h4>
                     <ul>
                         <li><a href="services.html">Movement Overhaul</a></li>
@@ -445,17 +407,13 @@
                         <li><a href="services.html">Assessment</a></li>
                     </ul>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.3s;">
+                <div class="footer-col reveal">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--secondary);"></i>
-                            14 Clockmaker's Lane, Suite 3</li>
-                        <li><i class="fas fa-phone" style="margin-right: 10px; color: var(--secondary);"></i> (555)
-                            WATCH-01</li>
-                        <li><i class="fas fa-envelope" style="margin-right: 10px; color: var(--secondary);"></i>
-                            hello@restore-watch.com</li>
-                        <li><i class="fas fa-clock" style="margin-right: 10px; color: var(--secondary);"></i> Mon–Fri
-                            9am–6pm</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 14 Clockmaker's Lane, London</li>
+                        <li><i class="fas fa-phone"></i> (555) WATCH-01</li>
+                        <li><i class="fas fa-envelope"></i> hello@restore-watch.com</li>
+                        <li><i class="fas fa-clock"></i> Mon–Fri 9am–6pm</li>
                     </ul>
                 </div>
             </div>
@@ -470,88 +428,6 @@
     </button>
 
     <script src="main.js"></script>
-    <style>
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @keyframes scroll-carousel {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-1600px);
-            }
-        }
-
-        @keyframes blink {
-
-            from,
-            to {
-                border-color: transparent
-            }
-
-            50% {
-                border-color: var(--secondary);
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .hero-split {
-                flex-direction: column;
-                height: auto;
-            }
-
-            .hero-left {
-                height: 400px;
-            }
-
-            .hero-right {
-                padding: 3rem;
-                text-align: center;
-            }
-
-            .hero-btns {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-
-            .insights-grid {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-
-            .insights-grid .card {
-                width: 100%;
-                max-width: 450px;
-                margin-bottom: 2rem;
-            }
-
-            .coverage-content {
-                padding-left: 0 !important;
-                text-align: center !important;
-                margin-top: 2rem;
-            }
-
-            .coverage-content ul {
-                align-items: center !important;
-            }
-        }
-    </style>
 </body>
 
 </html>

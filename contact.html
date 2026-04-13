@@ -7,6 +7,8 @@
     <title>Contact & Inquiries — Restore Vintage Watch Restoration</title>
     <meta name="description"
         content="Request a restoration quote. Contact our master watchmakers for a heritage restoration assessment.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
@@ -26,38 +26,38 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo"><i class="fas fa-clock" style="margin-right: 10px;"></i>RESTORE</a>
+            <a href="index.html" class="logo"><i class="fas fa-clock"></i>RESTORE</a>
 
             <ul class="nav-links">
-                <li><a href="index.html" >Home</a></li>
-                <li><a href="story.html">Home 2 </a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Home 2</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="process.html">Process</a></li>
                 <li><a href="journal.html">Journal</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                <!-- Mobile Actions -->
-                <li class="nav-actions-mobile">
-                    <button class="toggle-btn rtl-toggle" title="Toggle RTL"
-                        style="color: white; font-family: 'Cinzel', serif; font-size: 0.8rem; margin-bottom: 1rem;">
-                        <i class="fas fa-exchange-alt"></i> Toggle RTL
-                    </button>
-                    <button class="toggle-btn theme-toggle" title="Toggle Theme"
-                        style="color: white; font-family: 'Cinzel', serif; font-size: 0.8rem;">
-                        <i class="fas fa-moon"></i> Theme Mode
-                    </button>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); width: 100%;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; width: 100%;">
+                        <button class="toggle-btn rtl-toggle" title="Toggle RTL">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                        <button class="toggle-btn theme-toggle" title="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                            <span class="theme-text">Dark Mode</span>
+                        </button>
+                        <a href="login.html" class="btn-login" style="width: 100%; text-align: center; border-radius: 4px;">Login Page</a>
+                    </div>
                 </li>
             </ul>
 
             <div class="nav-actions">
                 <button class="toggle-btn rtl-toggle" title="Toggle RTL">
                     <i class="fas fa-exchange-alt"></i>
-                    <span class="rtl-toggle-text"
-                        style="font-size: 0.7rem; margin-left: 5px; font-family: 'Cinzel', serif;">RTL</span>
+                    <span class="rtl-toggle-text">RTL</span>
                 </button>
                 <button class="toggle-btn theme-toggle" title="Toggle Theme">
                     <i class="fas fa-moon"></i>
                 </button>
-                <a href="login.html" class="btn-login" style="font-family: 'Cinzel', serif;">Login</a>
+                <a href="login.html" class="btn-login">Login</a>
             </div>
 
             <div class="hamburger">
@@ -73,8 +73,8 @@
         <div class="hero-blurred-bg" style="background-image: url('https://images.squarespace-cdn.com/content/v1/627b2795b8e70b00cc6e04ac/d50d3fa1-0579-43b2-81c1-0adb92a2aeeb/176-ESPERLUXE_DAVIDOFF_HR84__40jamesncx-121A6474%2Bcopy.jpg');"></div>
         <div class="hero-overlay"></div>
         
-        <div class="container text-center">
-            <span class="eyebrow">The First Step</span>
+        <div class="container text-center reveal">
+            <span class="eyebrow" style="color: var(--secondary);">The First Step</span>
             <h1 class="italic">Restoration Inquiries</h1>
             <p>Submit your timepiece details below to begin the assessment process. Our team will review your inquiry and respond with a tailored restoration roadmap.</p>
         </div>
@@ -87,8 +87,8 @@
 
                 <!-- Inquiry Form -->
                 <div class="contact-form reveal"
-                    style="background: var(--bg-light); border: 1px solid var(--border); border-top: 5px solid var(--secondary); box-shadow: var(--shadow);">
-                    <h2 style="font-size: 1.8rem; margin-bottom: 2rem;">Restoration Details</h2>
+                    style="background: var(--bg-light); border: 1px solid var(--border); border-top: 5px solid var(--secondary); box-shadow: var(--shadow); padding: 3rem;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 2rem; text-align: center;">Restoration Details</h2>
                     <form id="restoration-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
                         <div class="form-group grid grid-2">
                             <div style="display: flex; flex-direction: column;">
@@ -159,7 +159,21 @@
                                     required>
                             </div>
                         </div>
-                        
+                        <div style="display: flex; flex-direction: column;">
+                            <label
+                                style="font-family: 'Cinzel', serif; font-size: 0.75rem; margin-bottom: 0.5rem;">Preferred
+                                Contact Method</label>
+                            <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+                                <label
+                                    style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.85rem;">
+                                    <input type="radio" name="contact_method" value="email" checked> Email
+                                </label>
+                                <label
+                                    style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.85rem;">
+                                    <input type="radio" name="contact_method" value="phone"> Phone / SMS
+                                </label>
+                            </div>
+                        </div>
 
                         <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Send
                             Restoration Inquiry</button>
@@ -175,30 +189,34 @@
                     <div class="info-list"
                         style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
                         <div class="info-block">
+                            <i class="fas fa-map-marker-alt" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 10px; display: block;"></i>
                             <h4
                                 style="font-family: 'Cinzel', serif; font-size: 1rem; color: var(--secondary); margin-bottom: 0.5rem;">
-                                <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Address</h4>
+                                Address</h4>
                             <p style="opacity: 0.8; margin: 0 auto; max-width: 300px;">14 Clockmaker's Lane, Suite
                                 3<br>London, EC1V 2NB, United Kingdom</p>
                         </div>
                         <div class="info-block">
+                            <i class="fas fa-clock" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 10px; display: block;"></i>
                             <h4
                                 style="font-family: 'Cinzel', serif; font-size: 1rem; color: var(--secondary); margin-bottom: 0.5rem;">
-                                <i class="fas fa-clock" style="margin-right: 10px;"></i> Atelier Hours</h4>
+                                Atelier Hours</h4>
                             <p style="opacity: 0.8; margin: 0 auto; max-width: 300px;">Mon – Fri: 09:00 —
                                 18:00<br>Saturday: By Private Appointment<br>Sunday: Closed</p>
                         </div>
                         <div class="info-block">
+                            <i class="fas fa-phone-alt" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 10px; display: block;"></i>
                             <h4
                                 style="font-family: 'Cinzel', serif; font-size: 1rem; color: var(--secondary); margin-bottom: 0.5rem;">
-                                <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Direct Lines</h4>
+                                Direct Lines</h4>
                             <p style="opacity: 0.8; margin: 0 auto; max-width: 300px;">Workshop: (555)
                                 WATCH-01<br>Global Inquiries: +44 20 7946 0123</p>
                         </div>
                         <div class="info-block">
+                            <i class="fas fa-truck-fast" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 10px; display: block;"></i>
                             <h4
                                 style="font-family: 'Cinzel', serif; font-size: 1rem; color: var(--secondary); margin-bottom: 0.5rem;">
-                                <i class="fas fa-truck-fast" style="margin-right: 10px;"></i> Turnaround Times</h4>
+                                Turnaround Times</h4>
                             <p style="opacity: 0.8; font-size: 0.9rem; margin: 0 auto; max-width: 300px;">Essential: 2–3
                                 weeks<br>Full Overhaul: 6–8 weeks<br>Museum Grade: Subject to assessment</p>
                         </div>
@@ -234,29 +252,25 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col reveal">
-                    <a href="index.html" class="logo" style="display: block; margin-bottom: 1.5rem;"><i
-                            class="fas fa-clock" style="margin-right: 10px;"></i>HORLOGERIE</a>
-                    <p style="font-size: 0.9rem; opacity: 0.7;">Restoring time's treasures since 1987. We specialize in
-                        the preservation and technical restoration of vintage mechanical timepieces from the world's
-                        finest manufactures.</p>
-                    <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;"><i class="fas fa-clock"></i>RESTORE</a>
+                    <p>Restoring time's treasures since 1987. We specialize in the preservation and technical restoration of vintage mechanical timepieces from the world's finest manufactures.</p>
+                    <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.1s;">
+                <div class="footer-col reveal">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="story.html">Story</a></li>
+                        <li><a href="story.html">Home 2</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="process.html">Process</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.2s;">
+                <div class="footer-col reveal">
                     <h4>Services</h4>
                     <ul>
                         <li><a href="services.html">Movement Overhaul</a></li>
@@ -266,22 +280,18 @@
                         <li><a href="services.html">Assessment</a></li>
                     </ul>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.3s;">
+                <div class="footer-col reveal">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--secondary);"></i>
-                            14 Clockmaker's Lane, Suite 3</li>
-                        <li><i class="fas fa-phone" style="margin-right: 10px; color: var(--secondary);"></i> (555)
-                            WATCH-01</li>
-                        <li><i class="fas fa-envelope" style="margin-right: 10px; color: var(--secondary);"></i>
-                            hello@horlogerie-restore.com</li>
-                        <li><i class="fas fa-clock" style="margin-right: 10px; color: var(--secondary);"></i> Mon–Fri
-                            9am–6pm</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 14 Clockmaker's Lane, London</li>
+                        <li><i class="fas fa-phone"></i> (555) WATCH-01</li>
+                        <li><i class="fas fa-envelope"></i> hello@restore-watch.com</li>
+                        <li><i class="fas fa-clock"></i> Mon–Fri 9am–6pm</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Horlogerie Watch Restoration. All rights reserved.</p>
+                <p>&copy; 2026 Restore Watch Restoration. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -291,47 +301,6 @@
     </button>
 
     <script src="main.js"></script>
-    <style>
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 1024px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-
-            .workshop-info {
-                padding-left: 0;
-                margin-top: 4rem;
-                padding-top: 4rem;
-            }
-
-            .desktop-divider {
-                height: 1px !important;
-                width: 100% !important;
-                top: 0 !important;
-                left: 0 !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .contact-form {
-                padding: 2rem;
-            }
-
-            .grid-2 {
-                grid-template-columns: 1fr !important;
-            }
-        }
-    </style>
 </body>
 
 </html>

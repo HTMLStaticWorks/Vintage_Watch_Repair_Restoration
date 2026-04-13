@@ -7,6 +7,8 @@
     <title>Services — Restore Vintage Watch Restoration</title>
     <meta name="description"
         content="Master-level restoration services for vintage timepieces. From essential overhauls to complete museum-grade restorations.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
@@ -26,38 +26,35 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo"><i class="fas fa-clock" style="margin-right: 10px;"></i>RESTORE</a>
+            <a href="index.html" class="logo"><i class="fas fa-clock"></i>RESTORE</a>
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="story.html">Home 2</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="process.html">Process</a></li>
                 <li><a href="journal.html">Journal</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <!-- Mobile Actions -->
-                <li class="nav-actions-mobile">
-                    <button class="toggle-btn rtl-toggle" title="Toggle RTL"
-                        style="color: white; font-family: 'Cinzel', serif; font-size: 0.8rem; margin-bottom: 1rem;">
-                        <i class="fas fa-exchange-alt"></i> Toggle RTL
+                <li class="mobile-only">
+                    <button class="toggle-btn rtl-toggle" title="Toggle RTL">
+                        <i class="fas fa-exchange-alt"></i>
                     </button>
-                    <button class="toggle-btn theme-toggle" title="Toggle Theme"
-                        style="color: white; font-family: 'Cinzel', serif; font-size: 0.8rem;">
-                        <i class="fas fa-moon"></i> Theme Mode
+                    <button class="toggle-btn theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
                     </button>
+                    <a href="login.html" class="btn-login">Login</a>
                 </li>
             </ul>
 
             <div class="nav-actions">
                 <button class="toggle-btn rtl-toggle" title="Toggle RTL">
                     <i class="fas fa-exchange-alt"></i>
-                    <span class="rtl-toggle-text"
-                        style="font-size: 0.7rem; margin-left: 5px; font-family: 'Cinzel', serif;">RTL</span>
+                    <span class="rtl-toggle-text">RTL</span>
                 </button>
                 <button class="toggle-btn theme-toggle" title="Toggle Theme">
                     <i class="fas fa-moon"></i>
                 </button>
-                <a href="login.html" class="btn-login" style="font-family: 'Cinzel', serif;">Login</a>
+                <a href="login.html" class="btn-login">Login</a>
             </div>
 
             <div class="hamburger">
@@ -70,23 +67,20 @@
 
     <!-- HERO SECTION -->
     <section class="hero-section">
-        <div class="hero-blurred-bg"
-            style="background-image: url('https://www.watchworksus.com/cdn/shop/articles/A_sophisticated_and_modern_image_depicting_the_craftsmanship_involved_in_vintage_watch_repair_at_WatchWorks_in_Mission_Viejo_CA._The_scene_includes_a_1.webp?v=1714858854&width=1100');">
-        </div>
+        <div class="hero-blurred-bg" style="background-image: url('https://www.watchworksus.com/cdn/shop/articles/A_sophisticated_and_modern_image_depicting_the_craftsmanship_involved_in_vintage_watch_repair_at_WatchWorks_in_Mission_Viejo_CA._The_scene_includes_a_1.webp?v=1714858854&width=1100');"></div>
         <div class="hero-overlay"></div>
-
-        <div class="container text-center">
-            <span class="eyebrow">Our Expertise</span>
+        
+        <div class="container text-center reveal">
+            <span class="eyebrow" style="color: var(--secondary);">Our Expertise</span>
             <h1 class="italic">The Art of Restoration</h1>
-            <p>From periodic servicing to museum-grade technical restoration, we preserve the heartbeat of Horology with
-                surgical precision.</p>
+            <p>From periodic servicing to museum-grade technical restoration, we preserve the heartbeat of Horology with surgical precision.</p>
         </div>
     </section>
 
     <!-- SERVICE TIERS -->
     <section class="section">
         <div class="container">
-            <div class="grid grid-3 services-grid">
+            <div class="grid grid-3">
                 <!-- Tier 1 -->
                 <div class="card reveal"
                     style="padding: 0; align-items: stretch; text-align: left; background: var(--bg-light);">
@@ -96,7 +90,7 @@
                         <h3 style="color: white; margin-top: 0.5rem;">Vintage Service</h3>
                     </div>
                     <div style="padding: 2.5rem;">
-                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem; opacity: 0.8; min-height: 60px;">Recommended every 5–7 years
+                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem; opacity: 0.8;">Recommended every 5–7 years
                             to maintain optimal performance and prevent mechanical wear.</p>
                         <h4 style="font-size: 1rem; margin-bottom: 1rem;">Primary Procedures:</h4>
                         <ul style="font-size: 0.9rem;">
@@ -115,10 +109,11 @@
                             <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
                                     style="color: var(--secondary); margin-right: 10px;"></i> Gasket replacement</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline"
-                            style="width: 100%; margin-top: 2rem; display: flex; justify-content: center; align-items: center; text-align: center;">
-                            Select Service
-                        </a>
+                        <a href="contact.html" 
+   class="btn btn-outline" 
+   style="width: 100%; margin-top: 2rem; display: flex; justify-content: center; align-items: center; text-align: center;">
+   Select Service
+</a>
                     </div>
                 </div>
 
@@ -128,10 +123,10 @@
                     <div style="background: var(--primary); color: white; padding: 2rem; text-align: center;">
                         <span style="font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 2px;">MOST
                             REQUESTED</span>
-                        <h3 style="color: #FFFFFF !important; margin-top: 0.5rem;">Full Restoration</h3>
+                        <h3 style="color: var(--secondary); margin-top: 0.5rem;">Full Restoration</h3>
                     </div>
                     <div style="padding: 2.5rem; color: var(--text-light);">
-                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem; opacity: 0.8; min-height: 60px;">A comprehensive
+                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem; opacity: 0.8;">A comprehensive
                             transformation for timepieces that have reached an advanced state of neglect or wear.</p>
                         <h4 style="font-size: 1rem; margin-bottom: 1rem; color: var(--text-light);">Includes "Essential"
                             Plus:</h4>
@@ -152,11 +147,11 @@
                                     style="color: var(--secondary); margin-right: 10px;"></i> Hand re-shaping & luming
                             </li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline"
-                            style="width: 100%; margin-top: 2rem; display: flex; justify-content: center; align-items: center; text-align: center;">
-                            Inquire Privately
-                        </a>
-                    </div>
+                       <a href="contact.html" 
+   class="btn btn-outline" 
+   style="width: 100%; margin-top: 2rem; display: flex; justify-content: center; align-items: center; text-align: center;">
+   Inquire Privately
+</a></div>
                 </div>
 
                 <!-- Tier 3 -->
@@ -168,7 +163,7 @@
                         <h3 style="color: white; margin-top: 0.5rem;">Museum Grade</h3>
                     </div>
                     <div style="padding: 2.5rem;">
-                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem; opacity: 0.8; min-height: 60px;">For the rarest artifacts.
+                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem; opacity: 0.8;">For the rarest artifacts.
                             Authentic restoration to match original factory specifications from any era.</p>
                         <h4 style="font-size: 1rem; margin-bottom: 1rem;">Specialist Intervention:</h4>
                         <ul style="font-size: 0.9rem;">
@@ -188,10 +183,11 @@
                                     style="color: var(--secondary); margin-right: 10px;"></i> 2-Year Warranty extendable
                             </li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline"
-                            style="width: 100%; margin-top: 2rem; display: flex; justify-content: center; align-items: center; text-align: center;">
-                            Request Quote
-                        </a>
+                        <a href="contact.html" 
+   class="btn btn-primary"
+   style="width: 100%; margin-top: 2rem; background-color: var(--secondary); display: flex; justify-content: center; align-items: center; text-align: center;">
+   Request Quote
+</a>
                     </div>
                 </div>
             </div>
@@ -209,16 +205,13 @@
                 <div class="card reveal">
                     <div class="card-img-wrapper" style="height: 150px;">
                         <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Packaging">
+                            alt="Archival Packaging">
                         <div class="card-overlay"></div>
                     </div>
                     <div class="card-content" style="padding: 1.5rem;">
-                        <i class="fas fa-archive"
-                            style="font-size: 1.5rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-archive" style="font-size: 1.5rem; color: var(--secondary); margin-bottom: 1rem; display: block;"></i>
                         <h4 style="font-size: 1rem;">Archival Packaging</h4>
-                        <p style="font-size: 0.8rem; color: var(--secondary);">
-                            Restoration is delivered in a museum-grade preservation box.
-                        </p>
+                        <p style="font-size: 0.8rem; opacity: 0.8;">Museum-grade preservation box for safe-keeping.</p>
                     </div>
                 </div>
                 <div class="card reveal" style="transition-delay: 0.1s;">
@@ -228,12 +221,9 @@
                         <div class="card-overlay"></div>
                     </div>
                     <div class="card-content" style="padding: 1.5rem;">
-                        <i class="fas fa-file-invoice"
-                            style="font-size: 1.5rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-file-invoice" style="font-size: 1.5rem; color: var(--secondary); margin-bottom: 1rem; display: block;"></i>
                         <h4 style="font-size: 1rem;">Technical Report</h4>
-                        <p style="font-size: 0.8rem; color: var(--secondary);">Detailed breakdown of all services and
-                            timing
-                            results.</p>
+                        <p style="font-size: 0.8rem; opacity: 0.8;">Detailed breakdown of all services and timing results.</p>
                     </div>
                 </div>
                 <div class="card reveal" style="transition-delay: 0.2s;">
@@ -243,12 +233,9 @@
                         <div class="card-overlay"></div>
                     </div>
                     <div class="card-content" style="padding: 1.5rem;">
-                        <i class="fas fa-camera"
-                            style="font-size: 1.5rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--secondary); margin-bottom: 1rem; display: block;"></i>
                         <h4 style="font-size: 1rem;">Photo Journal</h4>
-                        <p style="font-size: 0.8rem; color: var(--secondary);">Before and after macro documentation of
-                            the process.
-                        </p>
+                        <p style="font-size: 0.8rem; opacity: 0.8;">Before and after macro documentation of the process.</p>
                     </div>
                 </div>
                 <div class="card reveal" style="transition-delay: 0.3s;">
@@ -258,12 +245,9 @@
                         <div class="card-overlay"></div>
                     </div>
                     <div class="card-content" style="padding: 1.5rem;">
-                        <i class="fas fa-shield-alt"
-                            style="font-size: 1.5rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-shield-alt" style="font-size: 1.5rem; color: var(--secondary); margin-bottom: 1rem; display: block;"></i>
                         <h4 style="font-size: 1rem;">Timing Warranty</h4>
-                        <p style="font-size: 0.8rem; color: var(--secondary);">
-                            A comprehensive one-year guarantee on mechanical precision.
-                        </p>
+                        <p style="font-size: 0.8rem; opacity: 0.8;">One-year guarantee on mechanical precision.</p>
                     </div>
                 </div>
             </div>
@@ -315,28 +299,25 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col reveal">
-                    <a href="index.html" class="logo" style="display: block; margin-bottom: 1.5rem;"><i
-                            class="fas fa-clock" style="margin-right: 10px;"></i>RESTORE</a>
-                    <p style="font-size: 0.9rem; opacity: 0.7;">Restoring time's treasures since 1987. We specialize in
-                        the preservation and technical restoration of vintage mechanical timepieces from the world's
-                        finest manufactures.</p>
-                    <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;"><i class="fas fa-clock"></i>RESTORE</a>
+                    <p>Restoring time's treasures since 1987. We specialize in the preservation and technical restoration of vintage mechanical timepieces from the world's finest manufactures.</p>
+                    <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.1s;">
+                <div class="footer-col reveal">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="story.html">Story</a></li>
+                        <li><a href="story.html">Home 2</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="process.html">Process</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.2s;">
+                <div class="footer-col reveal">
                     <h4>Services</h4>
                     <ul>
                         <li><a href="services.html">Movement Overhaul</a></li>
@@ -346,56 +327,19 @@
                         <li><a href="services.html">Assessment</a></li>
                     </ul>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.3s;">
+                <div class="footer-col reveal">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--secondary);"></i>
-                            14 Clockmaker's Lane, Suite 3</li>
-                        <li><i class="fas fa-phone" style="margin-right: 10px; color: var(--secondary);"></i> (555)
-                            WATCH-01</li>
-                        <li><i class="fas fa-envelope" style="margin-right: 10px; color: var(--secondary);"></i>
-                            hello@restore-watch.com</li>
-                        <li><i class="fas fa-clock" style="margin-right: 10px; color: var(--secondary);"></i> Mon–Fri
-                            9am–6pm</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 14 Clockmaker's Lane, London</li>
+                        <li><i class="fas fa-phone"></i> (555) WATCH-01</li>
+                        <li><i class="fas fa-envelope"></i> hello@restore-watch.com</li>
+                        <li><i class="fas fa-clock"></i> Mon–Fri 9am–6pm</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Restore Watch Restoration. All rights reserved.</p>
             </div>
-            <style>
-                @media (min-width: 1024px) {
-                   .services-grid {
-                       display: grid;
-                       grid-template-columns: repeat(3, 1fr);
-                   }
-                }
-                @media (max-width: 1024px) and (min-width: 769px) {
-                    .services-grid {
-                        grid-template-columns: repeat(2, 1fr) !important;
-                        gap: 3rem;
-                    }
-                    .services-grid > *:last-child:nth-child(odd) {
-                        grid-column: 1 / -1;
-                        justify-self: center;
-                        width: 100%;
-                        max-width: calc(50% - 1.5rem); /* Ensures size matches the 2-column cards above */
-                    }
-                }
-                
-                /* Tablet Specific Alignment Fix */
-                @media (max-width: 768px) and (min-width: 481px) {
-                    .services-grid {
-                        grid-template-columns: repeat(2, 1fr) !important;
-                    }
-                    .services-grid > *:last-child:nth-child(odd) {
-                        grid-column: 1 / -1;
-                        justify-self: center;
-                        width: 100%;
-                        max-width: calc(50% - 1.5rem); /* Matches the width of the cards in the 2-column row */
-                    }
-                }
-            </style>
         </div>
     </footer>
 
@@ -404,51 +348,6 @@
     </button>
 
     <script src="main.js"></script>
-    <style>
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 1024px) {
-            .grid-3 {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 3rem;
-            }
-
-            .card:nth-child(2) {
-                transform: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .grid-3 {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-grid {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-
-            .pricing-grid .card {
-                width: 100%;
-                max-width: 450px;
-                margin: 0 auto 2rem;
-            }
-
-            .grid-4 {
-                grid-template-columns: repeat(2, 1fr) !important;
-            }
-        }
-    </style>
 </body>
 
 </html>

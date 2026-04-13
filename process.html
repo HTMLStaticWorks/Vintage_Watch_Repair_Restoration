@@ -7,6 +7,8 @@
     <title>The Process — Restore Vintage Watch Restoration</title>
     <meta name="description"
         content="Inside the Atelier: A step-by-step walkthrough of our meticulous watch restoration process. From assessment to quality control.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
@@ -26,38 +26,35 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo"><i class="fas fa-clock" style="margin-right: 10px;"></i>RESTORE</a>
+            <a href="index.html" class="logo"><i class="fas fa-clock"></i>RESTORE</a>
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="story.html">Home 2</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="process.html" class="active">Process</a></li>
+                <li><a href="process.html">Process</a></li>
                 <li><a href="journal.html">Journal</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <!-- Mobile Actions -->
-                <li class="nav-actions-mobile">
-                    <button class="toggle-btn rtl-toggle" title="Toggle RTL"
-                        style="color: white; font-family: 'Cinzel', serif; font-size: 0.8rem; margin-bottom: 1rem;">
-                        <i class="fas fa-exchange-alt"></i> Toggle RTL
+                <li class="mobile-only">
+                    <button class="toggle-btn rtl-toggle" title="Toggle RTL">
+                        <i class="fas fa-exchange-alt"></i>
                     </button>
-                    <button class="toggle-btn theme-toggle" title="Toggle Theme"
-                        style="color: white; font-family: 'Cinzel', serif; font-size: 0.8rem;">
-                        <i class="fas fa-moon"></i> Theme Mode
+                    <button class="toggle-btn theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
                     </button>
+                    <a href="login.html" class="btn-login">Login</a>
                 </li>
             </ul>
 
             <div class="nav-actions">
                 <button class="toggle-btn rtl-toggle" title="Toggle RTL">
                     <i class="fas fa-exchange-alt"></i>
-                    <span class="rtl-toggle-text"
-                        style="font-size: 0.7rem; margin-left: 5px; font-family: 'Cinzel', serif;">RTL</span>
+                    <span class="rtl-toggle-text">RTL</span>
                 </button>
                 <button class="toggle-btn theme-toggle" title="Toggle Theme">
                     <i class="fas fa-moon"></i>
                 </button>
-                <a href="login.html" class="btn-login" style="font-family: 'Cinzel', serif;">Login</a>
+                <a href="login.html" class="btn-login">Login</a>
             </div>
 
             <div class="hamburger">
@@ -73,8 +70,8 @@
         <div class="hero-blurred-bg" style="background-image: url('https://cdn.prod.website-files.com/63b937f7cb69a848fab5e097/6736d5714b5bc57768cb153b_6736d422d92c3375fba9c6ad_prec_4_2048x.webp');"></div>
         <div class="hero-overlay"></div>
         
-        <div class="container text-center">
-            <span class="eyebrow">Our Technical Workflow</span>
+        <div class="container text-center reveal">
+            <span class="eyebrow" style="color: var(--secondary);">Our Technical Workflow</span>
             <h1 class="italic">The Restoration Lifecycle</h1>
             <p>Twelve meticulous steps from intake to archival delivery. Transparency and technical rigor in every tick.</p>
         </div>
@@ -83,109 +80,121 @@
     <!-- 6-STEP PROCESS -->
     <section class="section">
         <div class="container">
-            <!-- RESPONSIVE PROCESS GRID -->
-            <div class="process-grid">
-                <!-- Step 1 -->
-                <div class="process-item reveal">
-                    <div class="proc-img">
-                        <img src="https://www.marketsquarejewelers.com/cdn/shop/articles/antique-pocket-watch-3_1382x.jpg?v=1550754389"
-                            alt="Intake & Assessment"
-                            style="width: 100%; height: 380px; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
-                    </div>
-                    <div class="proc-content">
-                        <span class="step-number">01</span>
-                        <h2>Intake & Assessment</h2>
-                        <p>Every restoration begins with an exhaustive external and internal evaluation. We document the
-                            watch's condition, identify original vs. replacement parts, and assess the mechanical health of
-                            the gear train.</p>
-                        <p class="sub-text">This phase includes high-resolution photographic documentation for the client's record.</p>
-                    </div>
+            <!-- Step 1 -->
+            <div class="grid grid-2" style="align-items: center; margin-bottom: 6rem;">
+                <div class="proc-img reveal">
+                    <img src="https://www.marketsquarejewelers.com/cdn/shop/articles/antique-pocket-watch-3_1382x.jpg?v=1550754389"
+                        alt="Intake & Assessment"
+                        style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
                 </div>
-
-                <!-- Step 2 -->
-                <div class="process-item reveal" style="transition-delay: 0.1s;">
-                    <div class="proc-img">
-                        <img src="https://cdn.jewelryimages.net/static/domains/v6master/images/image-library/repairs/watches/cogs-in-sunlight.jpg?width=1200"
-                            alt="Disassembly"
-                            style="width: 100%; height: 380px; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
-                    </div>
-                    <div class="proc-content">
-                        <span class="step-number">02</span>
-                        <h2>Disassembly & Inspection</h2>
-                        <p>The mechanical movement is completely dismantled into its component parts — often over 150 individual pieces. Each part is inspected under a microscope for wear, fatigue, or corrosion.</p>
-                        <p class="sub-text">Worn components are identified for repair or authentic Swiss-made replacement.</p>
-                    </div>
+                <div class="proc-content reveal" style="padding-left: 4rem;">
+                    <span class="step-num">01</span>
+                    <h2 style="margin-top: -1rem; margin-bottom: 1.5rem;">Intake & Assessment</h2>
+                    <p>Every restoration begins with an exhaustive external and internal evaluation. We document the
+                        watch's condition, identify original vs. replacement parts, and assess the mechanical health of
+                        the escapement and gear train.</p>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">This phase includes high-resolution photographic
+                        documentation for the client's record.</p>
                 </div>
+            </div>
 
-                <!-- Step 3 -->
-                <div class="process-item reveal">
-                    <div class="proc-img">
-                        <img src="https://cdn.shopify.com/s/files/1/0908/6330/5051/files/horologist_repairing_on_an_old_clock.jpg?v=1746365620"
-                            alt="Ultrasonic Cleaning"
-                            style="width: 100%; height: 380px; object-fit: cover; border: 10px solid var(--bg-light); box-shadow: var(--shadow);">
-                    </div>
-                    <div class="proc-content">
-                        <span class="step-number">03</span>
-                        <h2>Ultrasonic Cleaning</h2>
-                        <p>Components undergo several stages of cleaning in ultrasonic baths using specialized solutions to remove decades of old lubricants and debris without affecting the metal's finish.</p>
-                        <p class="sub-text">The result: parts that are chemically clean and ready for precision lubrication.</p>
-                    </div>
+            <!-- Step 2 -->
+            <div class="grid grid-2" style="align-items: center; margin-bottom: 6rem; flex-direction: row-reverse;">
+                <div class="proc-content reveal" style="padding-right: 4rem;">
+                    <span class="step-num" style="text-align: right;">02</span>
+                    <h2 style="margin-top: -1rem; margin-bottom: 1.5rem; text-align: right;">Disassembly & Inspection
+                    </h2>
+                    <p style="text-align: right;">The mechanical movement is completely dismantled into its component
+                        parts — often over 150 individual pieces for complex calibers. Each part is inspected under a
+                        high-power microscope for wear, fatigue, or corrosion.</p>
+                    <p style="font-size: 0.9rem; opacity: 0.7; text-align: right;">Worn components are identified for
+                        repair or authentic Swiss-made replacement.</p>
                 </div>
-
-                <!-- Step 4 -->
-                <div class="process-item reveal" style="transition-delay: 0.1s;">
-                    <div class="proc-img">
-                        <img src="hero_bg_1774534169854.png" alt="Restoration"
-                            style="width: 100%; height: 380px; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
-                    </div>
-                    <div class="proc-content">
-                        <span class="step-number">04</span>
-                        <h2>Technical Restoration</h2>
-                        <p>The heart of our work. Pivots are polished, jewels replaced, and mainsprings renewed. The movement is painstakingly reassembled and lubricated with factory-specific synthetic oils.</p>
-                        <div class="proc-checks">
-                            <span><i class="fas fa-check"></i> Escape-wheel truing</span>
-                            <span><i class="fas fa-check"></i> Balance staff adjustment</span>
-                        </div>
-                    </div>
+                <div class="proc-img reveal" style="transition-delay: 0.2s;">
+                    <img src="https://cdn.jewelryimages.net/static/domains/v6master/images/image-library/repairs/watches/cogs-in-sunlight.jpg?width=1200"
+                        alt="Disassembly"
+                        style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
                 </div>
+            </div>
 
-                <!-- Step 5 -->
-                <div class="process-item reveal">
-                    <div class="proc-img">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cosmetic Refinement"
-                            style="width: 100%; height: 380px; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
-                    </div>
-                    <div class="proc-content">
-                        <span class="step-number">05</span>
-                        <h2>Cosmetic Refinement</h2>
-                        <p>The case and bracelet are restored, and the dial undergoes focused cleaning. We prioritize 'conservation' over 'polishing'—preserving the sharp lines and historic character.</p>
-                        <p class="sub-text">Removing depth scratches while maintaining original geometry.</p>
-                    </div>
+            <!-- Step 3 -->
+            <div class="grid grid-2" style="align-items: center; margin-bottom: 6rem;">
+                <div class="proc-img reveal">
+                    <img src="https://cdn.shopify.com/s/files/1/0908/6330/5051/files/horologist_repairing_on_an_old_clock.jpg?v=1746365620"
+                        alt="Ultrasonic Cleaning"
+                        style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
                 </div>
+                <div class="proc-content reveal" style="padding-left: 4rem;">
+                    <span class="step-num">03</span>
+                    <h2 style="margin-top: -1rem; margin-bottom: 1.5rem;">Ultrasonic Cleaning</h2>
+                    <p>Components undergo several stages of cleaning in ultrasonic baths using specialized,
+                        non-corrosive solutions. This removes decades of old lubricants, debris, and microscopic
+                        particles without affecting the metal's finish or tempering.</p>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">The result: parts that are chemically clean and ready
+                        for lubrication.</p>
+                </div>
+            </div>
 
-                <!-- Step 6 -->
-                <div class="process-item reveal" style="transition-delay: 0.1s;">
-                    <div class="proc-img">
-                        <img src="https://timeandtidewatches.com/wp-content/uploads/2024/10/how-to-read-a-timegrapher-feature.jpg" alt="Timing & Testing"
-                            style="width: 100%; height: 380px; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
-                    </div>
-                    <div class="proc-content">
-                        <span class="step-number">06</span>
-                        <h2>Timing & Testing</h2>
-                        <p>The watch is tested on a Timegrapher in 5 positions and on an auto-winder for 72 hours. Water resistance is verified using state-of-the-art pressure chambers.</p>
-                        <p class="sub-text">A mandatory final phase to ensure archival-grade precision.</p>
-                    </div>
+            <!-- Step 4 -->
+            <div class="grid grid-2" style="align-items: center; margin-bottom: 6rem;">
+                <!-- Content Left -->
+                <div class="proc-content reveal" style="padding-right: 4rem;">
+                    <span class="step-num" style="text-align: right;">04</span>
+                    <h2 style="margin-top: -1rem; margin-bottom: 1.5rem; text-align: right;">Technical Restoration</h2>
+                    <p style="text-align: right;">The heart of our work. Pivots are polished, jewels are replaced, and
+                        mainsprings are renewed. The movement is painstakingly reassembled and lubricated with up to
+                        five different specific oils based on factory requirements.</p>
+                    <ul style="list-style: none; text-align: right; margin-top: 1rem;">
+                        <li><i class="fas fa-check" style="color: var(--secondary); margin-left: 10px;"></i>
+                            Escape-wheel truing</li>
+                        <li><i class="fas fa-check" style="color: var(--secondary); margin-left: 10px;"></i> Balance
+                            staff adjustment</li>
+                        <li><i class="fas fa-check" style="color: var(--secondary); margin-left: 10px;"></i> Cannon
+                            pinion friction tuning</li>
+                    </ul>
+                </div>
+                <div class="proc-img reveal" style="transition-delay: 0.2s;">
+                    <img src="hero_bg_1774534169854.png" alt="Restoration"
+                        style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="grid grid-2" style="align-items: center; margin-bottom: 6rem;">
+                <div class="proc-img reveal">
+                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Cosmetic Refinement"
+                        style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
+                </div>
+                <div class="proc-content reveal" style="padding-left: 4rem;">
+                    <span class="step-num">05</span>
+                    <h2 style="margin-top: -1rem; margin-bottom: 1.5rem;">Cosmetic Refinement</h2>
+                    <p>The case and bracelet are restored, and the dial undergoes focused cleaning. We prioritize 'conservation' over 'polishing'—preserving the sharp lines and historic character of the watch while removing unsightly depth scratches.</p>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="grid grid-2" style="align-items: center; margin-bottom: 6rem; flex-direction: row-reverse;">
+                <div class="proc-content reveal" style="padding-right: 4rem; text-align: right;">
+                    <span class="step-num" style="display: block;">06</span>
+                    <h2 style="margin-top: -1rem; margin-bottom: 1.5rem;">Timing & Testing</h2>
+                    <p>A mandatory final phase. The watch is tested on a timing machine (Timegrapher) in 5 positions and on an auto-winder for 72 hours. Water resistance is verified using state-of-the-art pressure chambers.</p>
+                </div>
+                <div class="proc-img reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Timing & Testing"
+                        style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 15px solid var(--bg-light); box-shadow: var(--shadow);">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- TOOLS OF THE TRADE -->
-    <section class="section" style="background: var(--bg-dark); color: var(--text-light);">
+    <section class="section">
         <div class="container">
             <div class="text-center reveal" style="margin-bottom: 4rem;">
                 <span class="eyebrow" style="color: var(--secondary);">The Arsenal</span>
-                <h2 style="color: var(--text-light);">Tools of the Trade</h2>
+                <h2>Tools of the Trade</h2>
             </div>
             <div class="grid grid-4 text-center">
                 <div class="tool-item reveal">
@@ -221,28 +230,25 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col reveal">
-                    <a href="index.html" class="logo" style="display: block; margin-bottom: 1.5rem;"><i
-                            class="fas fa-clock" style="margin-right: 10px;"></i>RESTORE</a>
-                    <p style="font-size: 0.9rem; opacity: 0.7;">Restoring time's treasures since 1987. We specialize in
-                        the preservation and technical restoration of vintage mechanical timepieces from the world's
-                        finest manufactures.</p>
-                    <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;"><i class="fas fa-clock"></i>RESTORE</a>
+                    <p>Restoring time's treasures since 1987. We specialize in the preservation and technical restoration of vintage mechanical timepieces from the world's finest manufactures.</p>
+                    <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.1s;">
+                <div class="footer-col reveal">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="story.html">Story</a></li>
+                        <li><a href="story.html">Home 2</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="process.html">Process</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.2s;">
+                <div class="footer-col reveal">
                     <h4>Services</h4>
                     <ul>
                         <li><a href="services.html">Movement Overhaul</a></li>
@@ -252,17 +258,13 @@
                         <li><a href="services.html">Assessment</a></li>
                     </ul>
                 </div>
-                <div class="footer-col reveal" style="transition-delay: 0.3s;">
+                <div class="footer-col reveal">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--secondary);"></i>
-                            14 Clockmaker's Lane, Suite 3</li>
-                        <li><i class="fas fa-phone" style="margin-right: 10px; color: var(--secondary);"></i> (555)
-                            WATCH-01</li>
-                        <li><i class="fas fa-envelope" style="margin-right: 10px; color: var(--secondary);"></i>
-                            hello@restore-watch.com</li>
-                        <li><i class="fas fa-clock" style="margin-right: 10px; color: var(--secondary);"></i> Mon–Fri
-                            9am–6pm</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 14 Clockmaker's Lane, London</li>
+                        <li><i class="fas fa-phone"></i> (555) WATCH-01</li>
+                        <li><i class="fas fa-envelope"></i> hello@restore-watch.com</li>
+                        <li><i class="fas fa-clock"></i> Mon–Fri 9am–6pm</li>
                     </ul>
                 </div>
             </div>
@@ -289,76 +291,27 @@
             transform: translateY(0);
         }
 
-        /* NEW PROCESS GRID STYLES */
-        .process-grid {
-            display: grid;
-            gap: 4rem 3rem;
-            margin-top: 4rem;
-        }
-
-        .process-item {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .step-number {
-            font-family: 'Cinzel', serif;
-            color: var(--secondary);
-            font-size: 3rem; /* Slightly larger */
-            opacity: 0.7; /* Much more visible */
-            display: block;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .sub-text {
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
-        .proc-checks {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-        }
-
-        .proc-checks i {
-            color: var(--secondary);
-            margin-right: 8px;
-        }
-
-        /* Desktop: 2 Columns */
-        @media (min-width: 1024px) {
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            /* If we had an odd number, we'd center the last one like this: */
-            /* .process-item:last-child:nth-child(odd) { grid-column: 1 / span 2; max-width: 600px; margin: 0 auto; } */
-        }
-
-        /* Tablet/Mobile: 1 Column Centered */
-        @media (max-width: 1023px) {
-            .process-grid {
-                grid-template-columns: 1fr;
-                max-width: 800px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-            .process-item {
-                margin-bottom: 6rem;
-            }
-            
-            .proc-img img {
-                height: 380px !important; /* Keep landscape even on mobile if requested, or adjust to portrait if preferred */
-            }
-        }
-
         @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr !important;
+                gap: 4rem;
+            }
+
+            .proc-content {
+                padding: 0 !important;
+                text-align: left !important;
+            }
+
+            .proc-content h2,
+            .proc-content p,
+            .proc-content ul {
+                text-align: left !important;
+            }
+
+            .proc-content span {
+                text-align: left !important;
+            }
+
             .grid-4 {
                 grid-template-columns: repeat(2, 1fr) !important;
             }

@@ -16,27 +16,23 @@ document.addEventListener('DOMContentLoaded', () => {
 function initTheme() {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
     
-    // Theme toggle buttons (could be multiple if inside mobile menu)
-    document.querySelectorAll('.theme-toggle').forEach(btn => {
-        btn.addEventListener('click', () => {
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.theme-toggle');
+        if (btn) {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
-        });
-        updateThemeIcon(savedTheme);
+        }
     });
 }
 
 function updateThemeIcon(theme) {
     document.querySelectorAll('.theme-toggle i').forEach(icon => {
-        if (theme === 'dark') {
-            icon.className = 'fas fa-sun';
-        } else {
-            icon.className = 'fas fa-moon';
-        }
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     });
 }
 
@@ -45,13 +41,14 @@ function initRTL() {
     const savedDir = localStorage.getItem('direction') || 'ltr';
     document.documentElement.setAttribute('dir', savedDir);
     
-    document.querySelectorAll('.rtl-toggle').forEach(btn => {
-        btn.addEventListener('click', () => {
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.rtl-toggle');
+        if (btn) {
             const currentDir = document.documentElement.getAttribute('dir');
             const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
             document.documentElement.setAttribute('dir', newDir);
             localStorage.setItem('direction', newDir);
-        });
+        }
     });
 }
 
@@ -67,29 +64,40 @@ function initNavigation() {
             
             // Hamburger animation
             const spans = hamburger.querySelectorAll('span');
-            if (navLinks.classList.contains('active')) {
+            if (hamburger.classList.contains('active')) {
                 spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
                 spans[1].style.opacity = '0';
                 spans[2].style.transform = 'rotate(-45deg) translate(6px, -7px)';
+                document.body.style.overflow = 'hidden'; // Prevent scroll when menu is open
             } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                resetHamburger(spans);
             }
         });
+
+        // Close menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                resetHamburger(hamburger.querySelectorAll('span'));
+            });
+        });
+    }
+
+    function resetHamburger(spans) {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+        document.body.style.overflow = 'auto';
     }
 
     // Scroll effect for navbar
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(15, 12, 8, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
-            navbar.style.height = '70px';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.background = 'var(--bg-dark)';
-            navbar.style.backdropFilter = 'none';
-            navbar.style.height = '80px';
+            navbar.classList.remove('scrolled');
         }
     });
 }
@@ -139,39 +147,31 @@ function setActiveLink() {
         if (linkPath === currentPath) {
             link.classList.add('active');
         } else {
-            link.classList.remove('active');
+            // Check if on a home sub-variant
+            if (currentPath === 'story.html' && linkPath === 'story.html') {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
         }
     });
 }
 
-// 7. Comparison Slider helper (to be used in index.html, portfolio.html)
+// 7. Comparison Slider helper
 function initComparisonSlider(container) {
     const slider = container.querySelector('.slider-handle');
     const beforeImage = container.querySelector('.before-image');
+    if (!slider || !beforeImage) return;
+
     let isResizing = false;
 
-    slider.addEventListener('mousedown', () => isResizing = true);
-    window.addEventListener('mouseup', () => isResizing = false);
-    window.addEventListener('mousemove', (e) => {
-        if (!isResizing) return;
-        let rect = container.getBoundingClientRect();
-        let x = e.clientX - rect.left;
-        let position = (x / rect.width) * 100;
-        
-        if (position < 0) position = 0;
-        if (position > 100) position = 100;
-        
-        beforeImage.style.width = position + '%';
-        slider.style.left = position + '%';
-    });
+    const startResize = () => isResizing = true;
+    const endResize = () => isResizing = false;
     
-    // Touch support
-    slider.addEventListener('touchstart', () => isResizing = true);
-    window.addEventListener('touchend', () => isResizing = false);
-    window.addEventListener('touchmove', (e) => {
+    const onMove = (e) => {
         if (!isResizing) return;
         let rect = container.getBoundingClientRect();
-        let x = e.touches[0].clientX - rect.left;
+        let x = (e.pageX || e.touches[0].pageX) - rect.left - window.scrollX;
         let position = (x / rect.width) * 100;
         
         if (position < 0) position = 0;
@@ -179,5 +179,14 @@ function initComparisonSlider(container) {
         
         beforeImage.style.width = position + '%';
         slider.style.left = position + '%';
-    });
+    };
+
+    slider.addEventListener('mousedown', startResize);
+    window.addEventListener('mouseup', endResize);
+    window.addEventListener('mousemove', onMove);
+    
+    slider.addEventListener('touchstart', startResize);
+    window.addEventListener('touchend', endResize);
+    window.addEventListener('touchmove', onMove);
 }
+
