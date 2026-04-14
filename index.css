@@ -446,6 +446,7 @@ ul {
   height: 3px;
   background-color: var(--secondary);
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 /* Hamburger Active States */
@@ -907,7 +908,7 @@ textarea:focus {
 }
 
 .btn-social:hover {
-  background: var(--bg-dark);
+  background: var(--bg-dark) !important;
   color: var(--text-light) !important;
   border-color: var(--secondary);
 }
@@ -1102,7 +1103,21 @@ textarea:focus {
   }
 
   .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Focus Home 2 Tablet Centering */
+  .journal-preview,
+  .newsletter {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+
+  .grid-2:has(.journal-preview),
+  .grid-2:has(.newsletter) {
     grid-template-columns: 1fr !important;
+    gap: 4rem !important;
   }
 
   .grid-3 {
@@ -1214,6 +1229,25 @@ textarea:focus {
     width: 100%;
   }
 
+  .small-article {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+  }
+
+  .small-article .article-img {
+    margin: 0 auto !important;
+    flex: 0 0 100px !important;
+    /* Maintain size in column flow */
+  }
+
+  .small-article .article-content {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+
   /* Process Page Alternation (Desktop Support) */
   @media (min-width: 1025px) {
     .proc-step:nth-child(even) {
@@ -1272,7 +1306,7 @@ textarea:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
+    gap: 6rem;
     margin-top: auto;
     padding-top: 1rem;
     border-top: 1px solid var(--border);
@@ -1282,6 +1316,13 @@ textarea:focus {
     font-size: 0.85rem;
     font-family: 'Cinzel', serif;
     color: var(--secondary);
+  }
+
+  .featured-meta .btn {
+    width: auto !important;
+    padding: 8px 18px !important;
+    font-size: 0.7rem !important;
+    min-width: 120px !important;
   }
 
   @media (max-width: 1024px) {
@@ -1301,8 +1342,15 @@ textarea:focus {
       flex-direction: column !important;
       align-items: center !important;
       text-align: center;
-      gap: 1.5rem !important;
+      gap: 1rem !important;
       padding-top: 2rem !important;
+    }
+
+    .featured-meta .btn {
+      width: auto !important;
+      min-width: 140px !important;
+      margin-top: 0.5rem;
+      padding: 8px 15px !important;
     }
 
     .meta-info {
@@ -1342,18 +1390,18 @@ textarea:focus {
     margin: 0 auto;
   }
 
-  /* grid-3 Tablet Centering (for Reputation / Philosophy) */
-  .grid-3 .card:nth-child(3),
-  .insights-grid .card:nth-child(3) {
-    grid-column: 1 / span 2 !important;
-    max-width: 500px !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-  }
-
   .insights-grid .card-img-wrapper img {
     height: 280px !important;
     /* Increased from 200px */
+  }
+
+  /* Centering 3rd item in 2-column tablet grid */
+  .grid-3 .card:nth-child(3),
+  .insights-grid .card:nth-child(3) {
+    grid-column: 1 / span 2 !important;
+    max-width: 450px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
   }
 }
 
@@ -1386,9 +1434,15 @@ textarea:focus {
   .grid-3,
   .grid-4,
   .footer-grid,
-  .timeline {
+  .timeline,
+  .insights-grid {
     grid-template-columns: 1fr !important;
-    gap: 3rem;
+    gap: 2.5rem !important;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: none !important;
   }
 
   .timeline .step:last-child {
@@ -1524,20 +1578,8 @@ textarea:focus {
     gap: 2rem !important;
   }
 
-  /* Journal Preview Mobile Fix */
-  .journal-preview {
-    text-align: center !important;
-  }
-
-  .small-article {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    gap: 1rem !important;
-  }
-
-  .small-article img {
-    margin: 0 auto !important;
+  .grid-2 {
+    gap: 2rem !important;
   }
 
   /* Universal Hero Overlap Fixes */
@@ -1566,6 +1608,10 @@ textarea:focus {
     max-width: 300px;
     padding: 15px 20px !important;
     font-size: 0.8rem !important;
+  }
+
+  .contact-form {
+    padding: 1.5rem !important;
   }
 
   /* Home 2 Mobile Fixes */
@@ -1605,6 +1651,12 @@ textarea:focus {
 
   .step-img-wrapper {
     margin-bottom: 3rem;
+  }
+
+  .contact-info-grid {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    align-items: center !important;
   }
 }
 
@@ -1790,10 +1842,12 @@ textarea:focus {
 /* Auth Page Mobile Optimizations */
 @media (max-width: 768px) {
   .auth-toggles {
-    top: 1rem !important;
-    right: auto !important;
-    inset-inline-end: 1rem !important;
-    gap: 0.6rem !important;
+    position: fixed !important;
+    top: 1.5rem !important;
+    right: 1.5rem !important;
+    left: auto !important;
+    gap: 1rem !important;
+    z-index: 9999 !important;
   }
 
   .auth-toggles .toggle-btn {
@@ -1849,6 +1903,20 @@ textarea:focus {
   .form-footer {
     gap: 3px !important;
   }
+}
+
+/* 10. SCROLL REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  visibility: hidden;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
 
 /* End of CSS */

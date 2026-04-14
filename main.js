@@ -79,15 +79,10 @@ function initNavigation() {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
             
-            // Hamburger animation
-            const spans = hamburger.querySelectorAll('span');
             if (hamburger.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(6px, -7px)';
                 document.body.style.overflow = 'hidden'; // Prevent scroll when menu is open
             } else {
-                resetHamburger(spans);
+                document.body.style.overflow = 'auto';
             }
         });
 
@@ -96,17 +91,12 @@ function initNavigation() {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 hamburger.classList.remove('active');
-                resetHamburger(hamburger.querySelectorAll('span'));
+                document.body.style.overflow = 'auto';
             });
         });
     }
 
-    function resetHamburger(spans) {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-        document.body.style.overflow = 'auto';
-    }
+
 
     // Scroll effect for navbar
     window.addEventListener('scroll', () => {
