@@ -10,7 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTop();
     initScrollReveal();
     setActiveLink();
+    initPasswordToggle();
 });
+
+// 0. Password Toggle
+function initPasswordToggle() {
+    document.addEventListener('click', (e) => {
+        const toggle = e.target.closest('.password-toggle');
+        if (toggle) {
+            const wrapper = toggle.closest('.password-wrapper');
+            const input = wrapper.querySelector('input');
+            const isPassword = input.type === 'password';
+            
+            input.type = isPassword ? 'text' : 'password';
+            toggle.classList.toggle('fa-eye', !isPassword);
+            toggle.classList.toggle('fa-eye-slash', isPassword);
+        }
+    });
+}
 
 // 1. Theme Toggle
 function initTheme() {
