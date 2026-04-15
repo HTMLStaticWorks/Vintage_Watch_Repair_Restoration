@@ -2123,6 +2123,50 @@ textarea:focus {
     margin-left: auto !important;
     margin-right: auto !important;
   }
+
+  /* Services page: keep tier CTA centered at card bottom on 768px */
+  .grid-2>.card[style*="align-items: stretch"]>div:last-child {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .grid-2>.card[style*="align-items: stretch"]>div:last-child>.btn.btn-outline {
+    margin-top: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  .grid-2>.card[style*="align-items: stretch"]>div:last-child ul {
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .grid-2>.card[style*="align-items: stretch"]>div:last-child ul li {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Story page: align "Receive Insights" CTA button at 768px */
+  .newsletter form {
+    align-items: center;
+  }
+
+  .newsletter form input[type="email"] {
+    width: 100%;
+  }
+
+  .newsletter form .btn.btn-primary {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
 @media (max-width: 360px) {
