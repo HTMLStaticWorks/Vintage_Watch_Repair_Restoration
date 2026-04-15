@@ -129,9 +129,20 @@ function initBackToTop() {
 
 // 5. Scroll Reveal
 function initScrollReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    // Safety fallback: reveal all elements after 2 seconds if they haven't been revealed
+    setTimeout(() => {
+        reveals.forEach(el => {
+            if (!el.classList.contains('revealed')) {
+                el.classList.add('revealed');
+            }
+        });
+    }, 2000);
+
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05, // Lower threshold for mobile
+        rootMargin: '0px 0px -20px 0px' // Less aggressive margin
     };
     
     const observer = new IntersectionObserver((entries) => {
@@ -143,7 +154,15 @@ function initScrollReveal() {
         });
     }, observerOptions);
     
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    reveals.forEach(el => {
+        // Check if already in viewport
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('revealed');
+        } else {
+            observer.observe(el);
+        }
+    });
 }
 
 // 6. Set Active Link
