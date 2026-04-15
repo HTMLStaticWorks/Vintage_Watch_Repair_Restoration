@@ -575,6 +575,28 @@ ul {
   transform: scale(1.1);
 }
 
+/* Testimonial portraits: keep full face visible (no crop) */
+.voices-appreciation-grid .card-img-wrapper {
+  background-color: #e9eef2;
+  width: 140px !important;
+  height: 220px !important;
+  border-radius: 10px !important;
+  margin: 0 auto 1.25rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voices-appreciation-grid .card-img-wrapper img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: 0 !important;
+}
+
+.testimonial-card:hover .card-img-wrapper img {
+  transform: none !important;
+}
+
 .card-content {
   padding: 2.5rem;
   flex-grow: 1;
@@ -1264,12 +1286,12 @@ textarea:focus {
     width: 100% !important;
     max-width: 200px;
     justify-content: center;
-    padding: 12px;
+    padding: 7px;
     border: 1px solid var(--border);
     border-radius: 4px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 3px;
     text-align: center;
   }
 
@@ -1396,7 +1418,7 @@ textarea:focus {
     width: 100%;
   }
 
-  .step:last-child {
+  .step:last-child:nth-child(6) {
     grid-column: 1 / span 2;
     max-width: 400px;
     margin: 0 auto;
@@ -1587,7 +1609,7 @@ textarea:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 15px !important;
+    padding: 0 10px !important;
     border: 1px solid var(--border);
     border-radius: 4px;
     background: transparent;
@@ -2005,6 +2027,13 @@ textarea:focus {
   }
 }
 
+/* Keep testimonials in one row on tablet view */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .voices-appreciation-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
 /* Auth Page Mobile Optimizations */
 @media (max-width: 768px) {
   .auth-toggles {
@@ -2054,6 +2083,45 @@ textarea:focus {
     max-width: 100% !important;
     overflow-x: hidden !important;
     overflow-y: auto !important;
+  }
+
+  /* Home 2 (story.html): keep bullets and CTA centered at tablet width */
+  .coverage-content {
+    text-align: center !important;
+  }
+
+  .coverage-content ul {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    margin: 2rem auto !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+  }
+
+  .coverage-content .btn,
+  .coverage-content .btn.btn-outline {
+    display: flex !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 220px !important;
+    margin: 2rem auto 0 !important;
+  }
+
+  .journal-page .featured-meta {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1rem !important;
+  }
+
+  .journal-page .featured-meta .btn,
+  .journal-page .text-center .btn.btn-outline {
+    display: inline-flex !important;
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
